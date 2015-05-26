@@ -1,0 +1,15 @@
+{
+     "background": {
+       "scripts": ["background.js"]
+  },
+   "description": "Add a context menu item to search for selected text at Yahoo Finance.",
+   "icons": {
+      "16": "icon16.png",
+      "48": "icon48.png"
+   },
+   "minimum_chrome_version": "6",
+   "name": "Stock Ticker Screener",
+   "permissions": [ "contextMenus", "tabs" ],
+   "version": "1.0",
+   "manifest_version": 2
+}
