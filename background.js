@@ -9,7 +9,7 @@ function searchyahoofinance(info)
  var searchstring = ticker;
 
  if ( n3 > 0 )
-   chrome.tabs.create({url: "http://finance.yahoo.com/q?s=" + searchstring});
+   chrome.tabs.create({url: "http://finance.yahoo.com/q?s=" + searchstring, active: false});
 }
 
 function searchthelion(info)
@@ -22,7 +22,7 @@ function searchthelion(info)
  var searchstring = ticker;
 
  if ( m3 > 0 )
-   chrome.tabs.create({url: "http://www.thelion.com/bin/aio_msg.cgi?cmd=search&symbol=" + searchstring});
+   chrome.tabs.create({url: "http://www.thelion.com/bin/aio_msg.cgi?cmd=search&symbol=" + searchstring, active: false});
 }
 
 function searchedgar(info)
@@ -32,7 +32,7 @@ function searchedgar(info)
  var urlsecondpart  = "&owner=exclude&action=getcompany";
  var urlcompanypart = encodeURI(searchstring);
 
- chrome.tabs.create({url: urlfirstpart + urlcompanypart + urlsecondpart});
+ chrome.tabs.create({url: urlfirstpart + urlcompanypart + urlsecondpart, active: false});
 }
 
 chrome.contextMenus.create({title: "Search Edgar", contexts:["selection"], onclick: searchedgar});
